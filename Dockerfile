@@ -1,6 +1,8 @@
 FROM centos:7.2.1511
 MAINTAINER Harmony OsCore <harmony-oscore@cisco.com>
 
+ENV container docker
+
 RUN yum -y install \
 python-devel \
 git \

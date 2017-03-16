@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 set -xe
 
-#DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../../kolla-kubernetes" && pwd )"
-DIR="/root/kolla-kubernetes" && pwd )"
+if [[ "$container" == "docker" ]]; then
+    DIR="/root/kolla-kubernetes"
+else
+    DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../../kolla-kubernetes" && pwd )"
+fi
 
 . "$DIR/tests/bin/common_workflow_config.sh"
 . "$DIR/tests/bin/common_iscsi_config.sh"
