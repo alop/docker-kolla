@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -xe
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../../kolla-kubernetes" && pwd )"
+#DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../../kolla-kubernetes" && pwd )"
+DIR="/root/kolla-kubernetes" && pwd )"
 
 . "$DIR/tests/bin/common_workflow_config.sh"
 . "$DIR/tests/bin/common_iscsi_config.sh"
