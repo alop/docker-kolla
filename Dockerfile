@@ -21,6 +21,10 @@ WORKDIR ${TEMPDIR}
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 
+RUN curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh && \
+    chmod +x get_helm.sh
+RUN ./get_helm.sh
+
 RUN git clone https://github.com/openstack/kolla-kubernetes.git
 
 WORKDIR kolla-kubernetes
@@ -72,4 +76,6 @@ RUN mv kubectl /usr/bin
 RUN chmod 755 /usr/bin/kubectl
 
 COPY scripts/kolla-entrypoint.bash /usr/local/bin/
+COPY scripts/deploy_oscore_kit.bash /usr/local/bin/
+COPY helm /usr/local/helm
 ENTRYPOINT ["kolla-entrypoint.bash"]

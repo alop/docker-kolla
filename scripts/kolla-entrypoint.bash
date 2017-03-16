@@ -8,12 +8,12 @@ for i in $NODES;do
     kubectl label node $i kolla_compute=true kolla_controller=true
 done
 kubectl create namespace kolla
-tools/secret-generator.py create
+kolla-kubernetes/tools/secret-generator.py create
 
 #Configure Helm and Build Charts
 helm init
-./zen/scripts/helm_build.bash ./kolla-kubernetes/helm/microservice ./kolla-kubernetes/helm/service\
-    ./kolla-kubernetes/helm/compute-kits ./zen/helm/compute-kits
+helm_build.bash ./kolla-kubernetes/helm/microservice ./kolla-kubernetes/helm/service\
+    ./kolla-kubernetes/helm/compute-kits /usr/local/helm/compute-kits
 
 
 #Deploy kolla-kubernetes
@@ -31,5 +31,5 @@ ironic-api ironic-api-haproxy ironic-conductor ironic-dnsmasq \
 ironic-inspector ironic-inspector-haproxy ironic-pxe;
 kollakube res create secret nova-libvirt
 
-./zen/scripts/deploy_oscore_kit.bash iscsi centos
+deploy_oscore_kit.bash iscsi centos
 
