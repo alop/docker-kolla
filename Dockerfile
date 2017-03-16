@@ -22,9 +22,10 @@ WORKDIR ${TEMPDIR}
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 
-RUN curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh && \
-    chmod +x get_helm.sh
-RUN ./get_helm.sh
+RUN wget https://kubernetes-helm.storage.googleapis.com/helm-v2.2.2-linux-amd64.tar.gz && \
+    tar -xzvf helm-v2.2.2-linux-amd64.tar.gz && \
+    mv linux-amd64/helm /usr/local/bin/
+
 RUN git clone https://github.com/openstack/kolla-kubernetes.git
 
 WORKDIR kolla-kubernetes
