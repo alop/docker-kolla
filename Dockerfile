@@ -10,6 +10,7 @@ crudini \
 jq \
 sshpass \
 bzip2 \
+openssl \
 openssl-devel \
 wget \
 unzip
@@ -24,7 +25,6 @@ RUN python get-pip.py
 RUN curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh && \
     chmod +x get_helm.sh
 RUN ./get_helm.sh
-
 RUN git clone https://github.com/openstack/kolla-kubernetes.git
 
 WORKDIR kolla-kubernetes
