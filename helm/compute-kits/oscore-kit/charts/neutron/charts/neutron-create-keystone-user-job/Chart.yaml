@@ -1,0 +1,11 @@
+description: FIXME
+engine: gotpl
+keywords:
+- openstack
+- neutron
+- user
+- create
+name: neutron-create-keystone-user-job
+sources:
+- http://github.com/openstack
+version: 0.6.0-1

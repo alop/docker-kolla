@@ -1,0 +1,11 @@
+description: FIXME
+engine: gotpl
+keywords:
+- openstack
+- neutron
+- server
+- svc
+name: neutron-server-svc
+sources:
+- http://github.com/openstack
+version: 0.6.0-1

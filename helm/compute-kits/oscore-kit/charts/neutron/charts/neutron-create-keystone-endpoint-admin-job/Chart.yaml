@@ -1,0 +1,10 @@
+description: FIXME
+engine: gotpl
+keywords:
+- openstack
+- neutron
+- keystone-endpoint-admin
+name: neutron-create-keystone-endpoint-admin-job
+sources:
+- http://github.com/openstack
+version: 0.6.0-1

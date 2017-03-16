@@ -1,0 +1,20 @@
+name: oscore-kit
+version: 0.6.0-1
+description: Helm chart for osCore compute kit deployment
+keywords:
+  - openstack
+  - mariadb
+  - rabbitmq
+  - memcached
+  - openvswitch
+  - keystone
+  - glance
+  - neutron
+  - nova-control
+  - ironic
+  - nova-compute
+  - horizon
+sources:
+  - http://github.com/openstack
+engine: gotpl
+#icon: A URL to an SVG or PNG image to be used as an icon (optional). make this point to the new project icons when ready

@@ -1,0 +1,9 @@
+dependencies:
+- condition: ""
+  enabled: false
+  name: kolla-common
+  repository: file://../../kolla-common
+  tags: null
+  version: 0.6.0-1
+digest: sha256:c9ae4c912e0deb39bfa970b32d62092362649f4d5738a79fbd4c69376aa5ec81
+generated: 2017-03-10T12:20:20.890749223-08:00

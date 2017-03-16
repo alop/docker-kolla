@@ -1,0 +1,10 @@
+description: FIXME
+engine: gotpl
+keywords:
+- openstack
+- kolla
+- common
+name: kolla-common
+sources:
+- http://github.com/openstack
+version: 0.6.0-1
