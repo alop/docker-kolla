@@ -78,7 +78,6 @@ RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s
 RUN mv kubectl /usr/bin
 RUN chmod 755 /usr/bin/kubectl
 
-COPY scripts/kolla-entrypoint.bash /usr/local/bin/
-COPY scripts/deploy_oscore_kit.bash /usr/local/bin/
+COPY scripts/*.bash /usr/local/bin/
 COPY helm /usr/local/helm
 ENTRYPOINT ["kolla-entrypoint.bash"]
